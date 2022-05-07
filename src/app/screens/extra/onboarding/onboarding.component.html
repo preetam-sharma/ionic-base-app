@@ -1,0 +1,53 @@
+<ion-header class="header" collapse="fade">
+  <ion-toolbar>
+    <ion-button fill="clear" slot="start" *ngIf="!disablePrevBtn" (click)="prev()" >
+      <ion-icon color="dark" class="headerIcon menuIcon" src="../../../../assets/icon/left-arrows.svg" alt="Back Icon"></ion-icon>
+    </ion-button>
+    <ion-button class="skipButton" slot="end" color="dark" fill="clear" (click)="onboardingCompleted()">Skip</ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-slides #onboardingSlides pager="true" (ionSlideWillChange)="doCheck()">
+    <ion-slide class="ion-padding">
+      <img src="../../assets/img/onboarding/vegiee.webp" >
+      <div class="slider-text">
+        <h2>Fresh & Healthy Vegitables!</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+      </div>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <img src="../../assets/img/onboarding/time-management.jpg" >
+      <div class="slider-text">
+        <h2>Sexure Payment System!</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+      </div>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <img src="../../assets/img/onboarding/delivery.jpg" >
+      <div class="slider-text">
+        <h2>Guarented Quick Delivery</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="navigator">
+    <ion-button class="nextButton" *ngIf="!disableNextBtn" color="primary" fill="solid" (click)="next()">
+      <ion-icon src="../../../../assets/icon/angle-right.svg" alt="Next Icon"></ion-icon>
+    </ion-button>
+    <ion-button class="nextButton" *ngIf="disableNextBtn" color="primary" fill="solid" (click)="onboardingCompleted()">
+      <ion-icon src="../../../../assets/icon/angle-right.svg" alt="Next Icon"></ion-icon>
+    </ion-button>
+    <!-- <ion-button *ngIf="disableNextBtn" color="primary" (click)="onboardingCompleted()">GET STARTED</ion-button> -->
+  </div>
+
+</ion-content>

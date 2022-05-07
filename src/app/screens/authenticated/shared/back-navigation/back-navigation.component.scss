@@ -1,0 +1,36 @@
+ion-header.header{
+  &:after {
+    background-image: none;
+  }
+  ion-toolbar {
+    height: 70px;
+    display: flex;
+    // --background: #ffffff;
+    // background: #ffffff;
+    ion-button{
+      height: 45px;
+      --padding-start: 0;
+      --padding-end: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+      .headerIcon{
+        height: 45px;
+        width: 45px;
+        padding: 8px;
+        border: 2px solid silver;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  .headerIcon.cartIcon{
+    padding: 9px;
+  }
+
+  ion-badge{
+    position: absolute;
+    top: 2px;
+    left: -10px;
+    background-color: black;
+  }
+}
