@@ -20,14 +20,14 @@ export class EnterMobileNoComponent implements OnInit {
 
     this.platform.keyboardDidShow.subscribe(ev => {
       const { keyboardHeight } = ev;
-      console.log('active');
-      alert('keyboard active');
+      // console.log('active');
+      // alert('keyboard active');
       // Do something with the keyboard height such as translating an input above the keyboard.
     });
 
     this.platform.keyboardDidHide.subscribe(() => {
-      console.log('not active');
-      alert('keyboard closed');
+      // console.log('not active');
+      // alert('keyboard closed');
       // Move input back to original location
     });
 
